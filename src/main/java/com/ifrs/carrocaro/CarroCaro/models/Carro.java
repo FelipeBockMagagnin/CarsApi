@@ -43,33 +43,80 @@ public class Carro {
 	// @Column(name="descricao")
     private String descricao;
 
-	public List<Carro> getAllCarros()
-	{
-		return null;
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public boolean deleteCarro(long id)
+	public String getData_Compra()
 	{
-		return false;
+		return data_compra;
 	}
 
-	public Carro getCarroById(long id)
+	public void setData_Compra(String data)
 	{
-		return null;
+		this.data_compra = data;
 	}
 
-	public Carro getCarroByPlaca(String placa)
+	public String getPlaca()
 	{
-		return null;
+		return placa;
 	}
 
-	public Carro saveCarro(Carro carro)
+	public void setPlaca(String placa)
 	{
-		return null;
+		this.placa = placa;
 	}
 
-	public Carro updateCarro(Carro carro, long id)
+	public Double getPreco()
 	{
-		return null;
+		return preco;
+	}
+
+	public void setPreco(double preco)
+	{
+		this.preco = preco;
+	}
+
+	public String getForma_Compra()
+	{
+		return forma_compra;
+	}
+
+	public void setForma_compra(String forma)
+	{
+		this.forma_compra = forma;
+	}
+
+	public String getData_Fabricacao()
+	{
+		return data_fabricacao;
+	}
+
+	public void setData_Fabricacao(String data)
+	{ 
+		this.data_fabricacao = data;
+	}
+
+	public String getFoto()
+	{
+		return foto;
+	}
+
+	public void setFoto(String foto)
+	{
+		this.foto = foto;
+	}
+	
+	public String getDescricao()
+	{
+		return descricao;
+	}
+
+	public void setDescricao(String desc)
+	{
+		this.descricao = desc;
 	}
 }
