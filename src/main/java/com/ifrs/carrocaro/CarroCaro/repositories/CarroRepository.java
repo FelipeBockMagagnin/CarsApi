@@ -1,13 +1,11 @@
-// package com.ifrs.carrocaro.CarroCaro.repositories;
+package com.ifrs.carrocaro.CarroCaro.repositories;
 
-// import java.util.List;
+import java.util.List;
 
-// import com.ifrs.carrocaro.CarroCaro.models.Carro;
+import com.ifrs.carrocaro.CarroCaro.models.Carro;
 
-// import org.springframework.data.jpa.repository.JpaRepository;
-// import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-// @RepositoryRestResource
-// interface CarroRepository extends JpaRepository<Carro, Long> {
-//     List<Carro> getCarros();
-// }
+interface CarroRepository extends JpaRepository<Carro, Long> {
+    List<Carro> getCarros();
+}
