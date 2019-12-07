@@ -15,14 +15,14 @@ public class CarroController {
 
   @CrossOrigin
   @GetMapping("/Carro")
-  public ResponseEntity<String> all() {
-     return ResponseEntity.ok("Teste"); //Carro.getAllCarros();
+  public List<Carro> all() {
+     return Carro.getAllCarros();
   }
 
   @CrossOrigin
   @PostMapping("/Carro")
-  public ResponseEntity<String> createCarro(@Valid @RequestBody Carro Carro) {
-      return ResponseEntity.ok("Teste");  //Carro.saveCarro(Carro)
+  public ResponseEntity<Carro> createCarro (@Valid @RequestBody Carro Carro) {
+      return ResponseEntity.ok(Carro.saveCarro(Carro));
   }
 
   @CrossOrigin
