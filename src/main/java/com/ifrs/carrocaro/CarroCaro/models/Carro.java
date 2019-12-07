@@ -3,13 +3,13 @@ package com.ifrs.carrocaro.CarroCaro.models;
 import java.util.List;
 //import javax.validation.constraints.NotEmpty;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 // @Table(name= "carros")
 public class Carro {
-    // @Id
-    // @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     // @Column(name="carro_id")
 	private long id;
 	
