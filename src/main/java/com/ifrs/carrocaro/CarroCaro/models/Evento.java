@@ -14,7 +14,8 @@ public class Evento {
 	private long id;
 	
 	@Column(name="titulo")
-    // @NotEmpty(message="* Por favor insira o titulo")
+	// @NotEmpty(message="* Por favor insira o titulo")
+	
 	private String titulo;
 	
 	 @Column(name="data")
