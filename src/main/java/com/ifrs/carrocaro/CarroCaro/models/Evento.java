@@ -6,7 +6,7 @@ import javax.persistence.*;
 // import javax.persistence.*;
 
  @Entity
- @Table(name= "Eventos")
+ @Table(name= "evento")
 public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
