@@ -15,5 +15,5 @@ public interface EventoRepository extends JpaRepository<Evento, Long> {
     //Evento findByid(long id);
 
     // @Query("select * from evento e where e.data between :TimeStart and :TimeEnd")
-    public List<Evento> findAllbyTempo(@Param("TimeStart") String TimeStart, @Param("TimeEnd") String TimeEnd);
+    //public List<Evento> findAllbyData(@Param("TimeStart") String TimeStart, @Param("TimeEnd") String TimeEnd);
 }
