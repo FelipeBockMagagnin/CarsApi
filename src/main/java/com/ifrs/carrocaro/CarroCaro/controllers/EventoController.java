@@ -31,8 +31,8 @@ public class EventoController {
     return ResponseEntity.ok(er.save(evento));  
   }
 
-  @RequestMapping(path = "/evento/{dataInicial}/{DataFinal}", method = RequestMethod.GET)
-  public List<Evento> getByData(@PathVariable String dataInicial, @PathVariable String DataFinal) {
+  @RequestMapping(path = "/evento", method = RequestMethod.GET)
+  public List<Evento> getByData(@RequestParam String dataInicial, @RequestParam String DataFinal) {
       return er.findAllbyTempo(dataInicial, DataFinal);
   }
 
