@@ -26,9 +26,14 @@ public class EventoController {
 
   @CrossOrigin
   @PostMapping("/evento")
-  public Evento post(@Valid @RequestBody Evento evento)
+  public ResponseEntity<Evento> post(@Valid @RequestBody Evento evento)
   {
-    return er.save(evento);  
+    return ResponseEntity.ok(er.save(evento));  
+  }
+
+  @RequestMapping(path = "/evento/{dataInicial}/{DataFinal}", method = RequestMethod.GET)
+  public List<Evento> getByData(@PathVariable String dataInicial, @PathVariable String DataFinal) {
+      return er.findAllbyTempo(dataInicial, DataFinal);
   }
 
   @CrossOrigin

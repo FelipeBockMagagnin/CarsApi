@@ -25,8 +25,8 @@ public class CarroController {
 
   @CrossOrigin
   @PostMapping("/carro")
-  public Carro post(@Valid @RequestBody Carro evento) {
-    return cr.save(evento);
+  public ResponseEntity<Carro> post(@Valid @RequestBody Carro evento) {
+    return ResponseEntity.ok(cr.save(evento));
   }
 
   @CrossOrigin
