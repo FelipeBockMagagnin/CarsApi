@@ -31,12 +31,12 @@ public class EventoController {
     return er.save(evento);  
   }
 
-  // @CrossOrigin
-  // @PutMapping('/Evento/{id}')
-  // public ResponseEntity<Evento> updateEvento(@Valid @RequestBody Evento Evento,
-  //   @PathVariable(value= 'id') Long id) {
-  //       return ResponseEntity.ok(Evento.updateEvento(Evento, id));
-  //   }
+  @CrossOrigin
+  @PutMapping("/Evento/{id}")
+  public ResponseEntity<Evento> updateEvento(@Valid @RequestBody Evento Evento,
+    @PathVariable(value= "id") Long id) {
+        return ResponseEntity.ok(er.save(Evento));
+    }
 
   // @CrossOrigin
   // @DeleteMapping('/Evento/{id}')

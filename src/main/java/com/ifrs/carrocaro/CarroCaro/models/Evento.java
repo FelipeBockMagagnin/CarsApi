@@ -26,7 +26,7 @@ public class Evento {
 	@Column(name="descricao")
 	private String descricao;
 	
-     @Column(name="id_carro")
+    @Column(name="id_carro")
 	private long id_carro;
  
 	public String getTitulo()
@@ -77,5 +77,15 @@ public class Evento {
 	public void setDescricao(String descr)
 	{
 		this.descricao = descr;
+	}
+
+	public long getid_carro()
+	{
+		return id_carro;
+	}
+
+	public void setid_carro(long id)
+	{
+		this.id_carro = id;
 	}
 }
