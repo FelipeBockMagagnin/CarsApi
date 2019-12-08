@@ -1,8 +1,4 @@
 package com.ifrs.carrocaro.CarroCaro.models;
-
-import java.util.List;
-//import javax.validation.constraints.NotEmpty;
-
 import javax.persistence.*;
 
 @Entity

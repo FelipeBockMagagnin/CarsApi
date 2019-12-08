@@ -22,8 +22,8 @@ public class CarroController {
   }
 
   // @CrossOrigin
-  // @GetMapping('/Carro')
-  // public List<Carro> all() {
+  // @GetMapping("/Carro/Data")
+  // public List<Carro> GetByData() {
   //    return Carro.getAllCarros();
   // }
 

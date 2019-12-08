@@ -1,11 +1,11 @@
 package com.ifrs.carrocaro.CarroCaro.repositories;
 
-import java.util.List;
 
 import com.ifrs.carrocaro.CarroCaro.models.Evento;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-interface EventoRepository extends JpaRepository<Evento, Long> {
+public interface EventoRepository extends CrudRepository<Evento, String> {
     //List<Evento> getEventos();
+    Evento findByid(long id);
 }
