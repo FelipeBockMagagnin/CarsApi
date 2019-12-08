@@ -7,5 +7,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface EventoRepository extends CrudRepository<Evento, Long> {
     //List<Evento> getEventos();
-    Evento findByid(long id);
+    //Evento findByid(long id);
 }

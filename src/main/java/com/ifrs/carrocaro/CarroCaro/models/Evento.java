@@ -10,10 +10,10 @@ import javax.persistence.*;
 public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-     @Column(name="Evento_id")
+    @Column(name="id")
 	private long id;
 	
-	 @Column(name="titulo")
+	@Column(name="titulo")
     // @NotEmpty(message="* Por favor insira o titulo")
 	private String titulo;
 	
@@ -35,35 +35,55 @@ public class Evento {
 	
      @Column(name="id_carro")
     // @NotEmpty(message="* Por favor insira o id")
-	private String id_carro;
-
-	public List<Evento> getAllEventos()
+	private long id_carro;
+ 
+	public String getTitulo()
 	{
-		return null;
+		return titulo;
 	}
 
-	public boolean deleteEvento(long id)
+	public void setTitulo(String titu)
 	{
-		return false;
+		this.titulo = titu;
 	}
 
-	public Evento getEventoById(long id)
+	public String getData()
 	{
-		return null;
+		return data;
 	}
 
-	public Evento getEventoByPlaca(String placa)
+	public void setData(String dat)
 	{
-		return null;
+		this.data = dat;
 	}
 
-	public Evento saveEvento(Evento Evento)
+	public String getTag()
 	{
-		return null;
+		return tag;
 	}
 
-	public Evento updateEvento(Evento Evento, long id)
+	public void setTag(String newTag)
 	{
-		return null;
+		this.tag = newTag;
+	}
+
+	public double getValor()
+	{
+		return valor;
+	}
+
+	public void setValor(double val)
+	{
+		this.valor = val;
+	}
+
+	public String getDescricao()
+	{
+		return descricao;
+	}
+
+	public void setDescricao(String descr)
+	{
+		this.descricao = descr;
 	}
 }
