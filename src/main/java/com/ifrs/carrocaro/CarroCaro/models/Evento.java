@@ -11,29 +11,22 @@ public class Evento {
     @Column(name="id")
 	private long id;
 	
-	@Column(name="titulo")
-	// @NotEmpty(message="* Por favor insira o titulo")
-	
+	@Column(name="titulo")	
 	private String titulo;
 	
-	 @Column(name="data")
-    // @NotEmpty(message="* Por favor insira a data")
+	@Column(name="data")
     private String data;
 
-     @Column(name="tag")
-    // @NotEmpty(message="* Por favor insira a tag")
+    @Column(name="tag")
 	private String tag;
 	
-	 @Column(name="valor")
-    // @NotEmpty(message="* Por favor insira o valor")
+	@Column(name="valor")
     private double valor;
 
-	 @Column(name="descricao")
-    // @NotEmpty(message="* Por favor insira a descricao")
+	@Column(name="descricao")
 	private String descricao;
 	
      @Column(name="id_carro")
-    // @NotEmpty(message="* Por favor insira o id")
 	private long id_carro;
  
 	public String getTitulo()

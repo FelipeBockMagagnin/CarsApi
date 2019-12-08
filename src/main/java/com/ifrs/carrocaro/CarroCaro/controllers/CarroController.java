@@ -2,6 +2,7 @@ package com.ifrs.carrocaro.CarroCaro.controllers;
 
 import com.ifrs.carrocaro.CarroCaro.models.Carro;
 
+import org.springframework.beans.factory.annotation.Autowired;
 //import com.ifrs.carrocarro.services.CarroService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -12,13 +13,22 @@ import com.ifrs.carrocaro.CarroCaro.repositories.*;
 
 @Controller
 public class CarroController {
-  private Carro Carro;
+
+  @Autowired
+  private CarroRepository cr;
+  
+  @CrossOrigin
+  @GetMapping("/carro")
+  public ResponseEntity<List<Carro>> getAll()
+  {
+    return ResponseEntity.ok(cr.findAll()); 
+  }
 
   @CrossOrigin
-  @GetMapping("/Carro")
-  public ResponseEntity<String> get()
+  @PostMapping("/carro")
+  public Carro post(@Valid @RequestBody Carro evento)
   {
-    return ResponseEntity.ok("[{'carId':1,'nome':'Vectra','datacompra':'2019-10-02','placa':'itk-2098','preco':1000.0,'formacompra':'dinheiro','datafabricacao':'2018-10-10','foto':'','descricao':'carro bonito'},{'carId':2,'nome':'Vectra','datacompra':'2019-10-02','placa':'itk-2098','preco':1000.0,'formacompra':'dinheiro','datafabricacao':'2018-10-10','foto':'','descricao':'carro bonito'},{'carId':3,'nome':'Carro teste','datacompra':'2019-10-02','placa':'itk-2098','preco':3000.0,'formacompra':'dinheiro','datafabricacao':'2018-10-10','foto':'','descricao':'carro bonito'}]");
+    return cr.save(evento);  
   }
 
   // @CrossOrigin

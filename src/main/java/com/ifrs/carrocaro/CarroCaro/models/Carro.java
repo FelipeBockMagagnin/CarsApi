@@ -2,41 +2,35 @@ package com.ifrs.carrocaro.CarroCaro.models;
 import javax.persistence.*;
 
 @Entity
-// @Table(name= "carros")
+@Table(name= "carro")
 public class Carro {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    // @Column(name="carro_id")
+    @Column(name="carro_id")
 	private long id;
 	
-	// @Column(name="nome")
-    // @NotEmpty(message="* Por favor insira o nome do veiculo")
-	private String nome;
+	@Column(name="nome")
+    private String nome;
 	
-	// @Column(name="data_compra")
-    // @NotEmpty(message="* Por favor insira a data da compra do veiculo")
+	@Column(name="data_compra")
     private String data_compra;
 
-    // @Column(name="placa")
-    // @NotEmpty(message="* Por favor insira a placa do veiculo")
+    @Column(name="placa")
 	private String placa;
 	
-	// @Column(name="preco")
-    // @NotEmpty(message="* Por favor insira o preço do veiculo")
+	@Column(name="preco")
     private double preco;
 
-	// @Column(name="forma_compra")
-    // @NotEmpty(message="* Por favor insira a forma de compra do veiculo")
+	@Column(name="forma_compra")
 	private String forma_compra;
 	
-    // @Column(name="data_fabricacao")
-    // @NotEmpty(message="* Por favor insira a dara de fabricação")
+    @Column(name="data_fabricacao")
 	private String data_fabricacao;
 	
-	// @Column(name="foto")
+	@Column(name="foto")
 	private String foto;
 	
-	// @Column(name="descricao")
+	@Column(name="descricao")
     private String descricao;
 
 	public String getNome() {
