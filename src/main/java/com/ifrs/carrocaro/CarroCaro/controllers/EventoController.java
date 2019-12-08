@@ -33,7 +33,7 @@ public class EventoController {
 
   @RequestMapping(path = "/evento", method = RequestMethod.GET)
   public List<Evento> getByData(@RequestParam String dataInicial, @RequestParam String DataFinal) {
-      return er.findAllbyTempo(dataInicial, DataFinal);
+      //return er.findAllbyTempo(dataInicial, DataFinal);
   }
 
   @CrossOrigin
