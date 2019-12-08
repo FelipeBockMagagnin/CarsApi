@@ -32,18 +32,6 @@ public class EventoController {
   }
 
   // @CrossOrigin
-  // @GetMapping('/Evento')
-  // public List<Evento> all() {
-  //    return Evento.getAllEventos();
-  // }
-
-  // @CrossOrigin
-  // @PostMapping('/Evento')
-  // public ResponseEntity<Evento> createEvento (@Valid @RequestBody Evento Evento) {
-  //     return ResponseEntity.ok(Evento.saveEvento(Evento));
-  // }
-
-  // @CrossOrigin
   // @PutMapping('/Evento/{id}')
   // public ResponseEntity<Evento> updateEvento(@Valid @RequestBody Evento Evento,
   //   @PathVariable(value= 'id') Long id) {
