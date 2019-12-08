@@ -1,7 +1,5 @@
 package com.ifrs.carrocaro.CarroCaro.models;
 
-import java.util.List;
-
 import javax.persistence.*;
 // import javax.persistence.*;
 

@@ -1,7 +1,5 @@
 package com.ifrs.carrocaro.CarroCaro.controllers;
 
-import java.util.List;
-
 import javax.validation.Valid;
 
 import com.ifrs.carrocaro.CarroCaro.models.Evento;
@@ -9,10 +7,9 @@ import com.ifrs.carrocaro.CarroCaro.repositories.EventoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 public class EventoController {
 
   @Autowired
