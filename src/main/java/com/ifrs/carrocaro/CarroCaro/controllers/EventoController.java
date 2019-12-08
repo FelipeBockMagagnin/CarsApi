@@ -17,17 +17,12 @@ public class EventoController {
 	private EventoRepository er;
 
   @CrossOrigin
-  @GetMapping("/users")
-  public String getAllUsers() {
-    return er.findAll().toString();
-  }
-
-  @CrossOrigin
   @GetMapping("/evento")
   public ResponseEntity<String> get()
   {
-    Iterable<Evento> eventos = er.findAll();
-    return ResponseEntity.ok(eventos.toString());    
+    return ResponseEntity.ok("Quantidade de entidades" + er.count());
+    // Iterable<Evento> eventos = er.findAll();
+    // return ResponseEntity.ok(eventos.toString());    
     //return ResponseEntity.ok("[{'eventId':1,'titulo':'tag','data':'data','tag':'evento legal','valor':1.0,'descricao':'titulo','id_carro':100},{'eventId':2,'titulo':'tag','data':'data','tag':'evento legal','valor':1.0,'descricao':'titulo','id_carro':100},{'eventId':3,'titulo':'tag','data':'data','tag':'evento legal','valor':1.0,'descricao':'titulo','id_carro':100},{'eventId':5,'titulo':'tag','data':'data','tag':'evento legal','valor':1.0,'descricao':'titulo','id_carro':100},{'eventId':6,'titulo':'tag','data':'data','tag':'evento legal','valor':1.0,'descricao':'titulo','id_carro':100},{'eventId':7,'titulo':'tag','data':'data','tag':'evento legal','valor':1.0,'descricao':'titulo','id_carro':100},{'eventId':8,'titulo':'tag','data':'data','tag':'evento legal','valor':1300.0,'descricao':'titulo','id_carro':100},{'eventId':9,'titulo':'titulo teste','data':'12-03-2019','tag':'evento legal','valor':200.0,'descricao':'titulo','id_carro':1},{'eventId':10,'titulo':'titulo teste','data':'12-03-2019','tag':'evento legal','valor':200.0,'descricao':'titulo','id_carro':1},{'eventId':11,'titulo':'titulo teste','data':'12-03-2019','tag':'evento legal','valor':200.0,'descricao':'titulo','id_carro':1},{'eventId':12,'titulo':'titulo teste','data':'12-03-2019','tag':'evento legal','valor':20032.0,'descricao':'titulo','id_carro':1}]");
   }
 
