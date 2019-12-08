@@ -6,34 +6,34 @@ import javax.persistence.*;
 // import javax.persistence.*;
 
  @Entity
-// @Table(name= "Eventos")
+ @Table(name= "Eventos")
 public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    // @Column(name="Evento_id")
+     @Column(name="Evento_id")
 	private long id;
 	
-	// @Column(name="titulo")
+	 @Column(name="titulo")
     // @NotEmpty(message="* Por favor insira o titulo")
 	private String titulo;
 	
-	// @Column(name="data")
+	 @Column(name="data")
     // @NotEmpty(message="* Por favor insira a data")
     private String data;
 
-    // @Column(name="tag")
+     @Column(name="tag")
     // @NotEmpty(message="* Por favor insira a tag")
 	private String tag;
 	
-	// @Column(name="valor")
+	 @Column(name="valor")
     // @NotEmpty(message="* Por favor insira o valor")
     private double valor;
 
-	// @Column(name="descricao")
+	 @Column(name="descricao")
     // @NotEmpty(message="* Por favor insira a descricao")
 	private String descricao;
 	
-    // @Column(name="id_carro")
+     @Column(name="id_carro")
     // @NotEmpty(message="* Por favor insira o id")
 	private String id_carro;
 
