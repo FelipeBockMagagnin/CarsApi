@@ -16,6 +16,7 @@ public class EventoController {
   @Autowired
 	private EventoRepository er;
 
+  @CrossOrigin
   @GetMapping("/users")
   public String getAllUsers() {
     return er.findAll().toString();
