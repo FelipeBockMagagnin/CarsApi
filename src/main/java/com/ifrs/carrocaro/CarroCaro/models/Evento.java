@@ -29,7 +29,7 @@ public class Evento {
     @Column(name="id_carro")
 	private long id_carro;
  
-	public String getId()
+	public long getId()
 	{
 		return id;
 	}
