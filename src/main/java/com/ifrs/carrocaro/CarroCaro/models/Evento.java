@@ -34,9 +34,9 @@ public class Evento {
 		return id;
 	}
 
-	public void setId(long id)
+	public void setId(long _id)
 	{
-		this.id = id;
+		this.id = _id;
 	}
 
 	public String getTitulo()

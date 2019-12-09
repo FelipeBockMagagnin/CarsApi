@@ -42,19 +42,4 @@ public class EventoController {
     @PathVariable(value= "id") Long id) {
         return ResponseEntity.ok(er.save(Evento));
     }
-
-  // @CrossOrigin
-  // @DeleteMapping('/Evento/{id}')
-  // public ResponseEntity<?> deleteMemeber(@PathVariable Long id) {
-  //   Map<String,String> response = new HashMap<String,String>();
-  //   if(Evento.deleteEvento(id)) {
-  //     response.put('status', 'success');
-  //     response.put('message', 'Evento deleted successfully');
-  //      return ResponseEntity.ok(response);
-  //   } else {
-  //     response.put('status', 'error');
-  //     response.put('message', 'Somthing went wrong when delete the Evento');
-  //     return ResponseEntity.status(500).body(response);
-  //   }
-  // }
 }
