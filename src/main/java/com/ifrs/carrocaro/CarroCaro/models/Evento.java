@@ -29,6 +29,16 @@ public class Evento {
     @Column(name="id_carro")
 	private long id_carro;
  
+	public String getId()
+	{
+		return id;
+	}
+
+	public void setId(long id)
+	{
+		this.id = id;
+	}
+
 	public String getTitulo()
 	{
 		return titulo;
