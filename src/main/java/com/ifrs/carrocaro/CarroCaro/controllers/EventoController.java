@@ -15,31 +15,45 @@ import java.util.*;
 public class EventoController {
 
   @Autowired
-	private EventoRepository er;
+  private EventoRepository er;
 
   @CrossOrigin
   @GetMapping("/evento")
-  public ResponseEntity<List<Evento>> getAll()
-  {
-    return ResponseEntity.ok(er.findAll()); 
+  public ResponseEntity<List<Evento>> getAll() {
+    return ResponseEntity.ok(er.findAll());
   }
 
   @CrossOrigin
   @PostMapping("/evento")
-  public ResponseEntity<Evento> post(@Valid @RequestBody Evento evento)
-  {
-    return ResponseEntity.ok(er.save(evento));  
+  public ResponseEntity<Evento> post(@Valid @RequestBody Evento evento) {
+    return ResponseEntity.ok(er.save(evento));
   }
 
   // @RequestMapping(path = "/evento", method = RequestMethod.GET)
-  // public List<Evento> getByData(@RequestParam String dataInicial, @RequestParam String DataFinal) {
-  //     //return er.findAllbyTempo(dataInicial, DataFinal);
+  // public List<Evento> getByData(@RequestParam String dataInicial, @RequestParam
+  // String DataFinal) {
+  // //return er.findAllbyTempo(dataInicial, DataFinal);
   // }
 
   @CrossOrigin
   @PutMapping("/Evento/{id}")
-  public ResponseEntity<Evento> updateEvento(@Valid @RequestBody Evento Evento,
-    @PathVariable(value= "id") Long id) {
-        return ResponseEntity.ok(er.save(Evento));
-    }
+  public ResponseEntity<Evento> putEvento(@Valid @RequestBody Evento Evento, @PathVariable(value = "id") Long id) {
+    return ResponseEntity.ok(er.save(Evento));
+  }
+
+  @CrossOrigin
+  @DeleteMapping("/evento/{id}")
+  public ResponseEntity<Map<String,String>> deleteEvento(@PathVariable Long id) {
+    	Map<String,String> response = new HashMap<String,String>();
+    	try {
+			er.deleteById(id);
+			response.put("status", "success");
+			response.put("message", "Evento deleted successfully");
+			return ResponseEntity.ok(response);
+		} catch(Exception e) {
+			response.put("status", "error");
+			response.put("message", "Something went wrong when delete the Evento");
+			return ResponseEntity.status(500).body(response);
+		}
+  	}
 }
