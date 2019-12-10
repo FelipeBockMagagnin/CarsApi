@@ -37,11 +37,6 @@ public class Carro {
 	{
 		return id;
 	}
-
-	public void setId(long _id)
-	{
-		this.id = _id;
-	}
 	
 	public String getNome() {
 		return nome;
