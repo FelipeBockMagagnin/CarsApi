@@ -27,9 +27,9 @@ public class EventoController {
     @PostMapping("/evento")
     public ResponseEntity<Evento> post(@Valid @RequestBody Evento evento) {
         if (er.existsById(evento.getId())) {
+            er.deleteById(evento.getId());
             return ResponseEntity.ok(er.save(evento));
         } else {
-            er.deleteById(evento.getId());
             return ResponseEntity.ok(er.save(evento));
         }
     }
