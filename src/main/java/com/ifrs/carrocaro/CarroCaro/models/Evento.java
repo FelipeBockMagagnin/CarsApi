@@ -34,11 +34,6 @@ public class Evento {
 		return id;
 	}
 
-	public void setId(long _id)
-	{
-		this.id = _id;
-	}
-
 	public String getTitulo()
 	{
 		return titulo;
