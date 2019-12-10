@@ -59,11 +59,11 @@ public class EventoController {
         try {
             er.deleteById(id);
             response.put("status", "success");
-            response.put("message", "Evento deleted successfully");
+            response.put("message", "Evento deletado :)");
             return ResponseEntity.ok(response);
         } catch (Exception e) {
             response.put("status", "error");
-            response.put("message", "Something went wrong when delete the Evento");
+            response.put("message", "Algo deu errado ao deletar Evento");
             return ResponseEntity.status(500).body(response);
         }
     }

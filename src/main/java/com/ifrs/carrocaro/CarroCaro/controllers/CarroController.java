@@ -3,7 +3,6 @@ package com.ifrs.carrocaro.CarroCaro.controllers;
 import com.ifrs.carrocaro.CarroCaro.models.Carro;
 
 import org.springframework.beans.factory.annotation.Autowired;
-//import com.ifrs.carrocarro.services.CarroService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -45,11 +44,11 @@ public class CarroController {
         try {
             cr.deleteById(id);
             response.put("status", "success");
-            response.put("message", "Carro deleted successfully");
+            response.put("message", "Carro deletado :)");
             return ResponseEntity.ok(response);
         } catch (Exception e) {
             response.put("status", "error");
-            response.put("message", "Something went wrong when delete the Carro");
+            response.put("message", "Ao deu errado ao deletar o Carro");
             return ResponseEntity.status(500).body(response);
         }
     }

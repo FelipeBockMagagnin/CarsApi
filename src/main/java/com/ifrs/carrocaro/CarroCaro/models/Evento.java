@@ -1,10 +1,9 @@
 package com.ifrs.carrocaro.CarroCaro.models;
 
 import javax.persistence.*;
-// import javax.persistence.*;
 
- @Entity
- @Table(name= "evento")
+@Entity
+@Table(name= "evento")
 public class Evento {
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)    
