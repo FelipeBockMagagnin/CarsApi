@@ -34,7 +34,7 @@ public class CarroController {
 
     @CrossOrigin
     @PutMapping("/Carro/{id}")
-    public ResponseEntity<Carro> updateCarro(@Valid @RequestBody Carro Carro, @PathVariable(value = "id") Long id) {
+    public ResponseEntity<Carro> updateCarro(@Valid @RequestBody Carro Carro, @PathVariable(value = "id") long id) {
         return ResponseEntity.ok(cr.save(Carro));
     }
 
