@@ -34,6 +34,12 @@ public class EventoController {
         }
     }
 
+    @CrossOrigin
+    @PostMapping("/evento/{carro_id}")
+    public ResponseEntity<List<Evento>> post(@PathVariable(value = "carro_id") Long carro_id) {
+        return ResponseEntity.ok(er.findAllByid_carro(carro_id));        
+    }
+
     // @RequestMapping(path = "/evento", method = RequestMethod.GET)
     // public List<Evento> getByData(@RequestParam String dataInicial, @RequestParam
     // String DataFinal) {
